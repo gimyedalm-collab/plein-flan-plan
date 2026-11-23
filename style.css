@@ -201,3 +201,4 @@ td.n,th{font-variant-numeric:tabular-nums}
 .math b small{font-size:.45em;font-weight:700;margin-left:3px;opacity:.75}
 .math>div>span{display:block;margin-top:8px;font-size:14px;color:var(--mute)}
 @media (max-width:640px){.math{grid-template-columns:1fr}.math>div{border-right:0;border-bottom:1px solid var(--line)}.math>div:last-child{border-bottom:0}}
+.eyebrow,.num,.tl .when{letter-spacing:.02em;text-transform:none;font-size:13.5px}
