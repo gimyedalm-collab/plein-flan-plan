@@ -199,5 +199,5 @@ td.n,th{font-variant-numeric:tabular-nums}
 .math>div{padding:22px 24px;border-right:1px solid var(--line)}.math>div:last-child{border-right:0}
 .math b{display:block;font:800 34px/1.1 var(--sans);letter-spacing:-.035em;color:var(--char)}
 .math b small{font-size:.45em;font-weight:700;margin-left:3px;opacity:.75}
-.math span{display:block;margin-top:8px;font-size:14px;color:var(--mute)}
+.math>div>span{display:block;margin-top:8px;font-size:14px;color:var(--mute)}
 @media (max-width:640px){.math{grid-template-columns:1fr}.math>div{border-right:0;border-bottom:1px solid var(--line)}.math>div:last-child{border-bottom:0}}
