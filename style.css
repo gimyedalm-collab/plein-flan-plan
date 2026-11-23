@@ -55,6 +55,7 @@ h3{font-family:var(--serif);font-size:20px;margin:34px 0 10px}
 .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g2x{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px}
 .dark .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
 .card h4{font-family:var(--serif);font-size:18px;margin:0 0 8px}
