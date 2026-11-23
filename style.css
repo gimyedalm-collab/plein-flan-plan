@@ -202,3 +202,4 @@ td.n,th{font-variant-numeric:tabular-nums}
 .math>div>span{display:block;margin-top:8px;font-size:14px;color:var(--mute)}
 @media (max-width:640px){.math{grid-template-columns:1fr}.math>div{border-right:0;border-bottom:1px solid var(--line)}.math>div:last-child{border-bottom:0}}
 .eyebrow,.num,.tl .when{letter-spacing:.02em;text-transform:none;font-size:13.5px}
+@media (max-width:640px){table.stack,table.stack tbody,table.stack tr,table.stack td{display:block}table.stack tr:first-child{display:none}table.stack tr{padding:14px 16px;border-bottom:1px solid var(--line)}table.stack td{border:0;padding:3px 0}table.stack td:first-child{font-size:17px;padding-bottom:6px}table.stack td[data-l]:not([data-l=""])::before{content:attr(data-l);display:block;font-size:12px;font-weight:600;color:var(--wood)}}
