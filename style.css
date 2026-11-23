@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;600;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
 :root{
   --marble:#F4F1EC; --paper:#FBF9F5; --taupe:#8B735C; --wood:#B07A4F; --char:#2A2622; --ink:#1F1C19;
   --mute:#6F675E; --line:#E2DCD2; --soft:#EDE7DD;
   --ok:#2F5D50; --warn:#A2462B; --ai:#4B4690; --need:#8A5A12;
-  --serif:"Noto Serif KR",serif; --en:"Cormorant Garamond",serif;
+  --serif:var(--sans); --en:var(--sans);
   --sans:"Pretendard",-apple-system,"Malgun Gothic",sans-serif;
+  --label:600 12.5px/1.4 var(--sans);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -68,8 +68,8 @@ li{margin:4px 0}
 .dark .stat b{color:#fff}
 .stat.bad b{color:var(--warn)}.dark .stat.bad b{color:#E6957A}
 .stat.good b{color:var(--ok)}.dark .stat.good b{color:#9CCBB8}
-.stat span{display:block;margin-top:10px;font-size:14px;color:var(--mute)}
-.dark .stat span{color:#B9AFA3}
+.stat>span{display:block;margin-top:10px;font-size:14px;color:var(--mute)}
+.dark .stat>span{color:#B9AFA3}
 
 /* tables */
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
@@ -171,3 +171,22 @@ footer a{color:#D9C3A8}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
   .gal figure:first-child{grid-column:span 2;grid-row:span 1}
 }
+
+/* v3 type system: one family (Pretendard), lining tabular figures, weight-led hierarchy */
+body{font-feature-settings:"tnum" 1,"lnum" 1;letter-spacing:-.005em}
+h1,h2,h3,h4,.hero2 h1{letter-spacing:-.025em;font-weight:700}
+h2{font-size:clamp(26px,3.4vw,40px);line-height:1.32;font-weight:800}
+h3{font-size:20px;font-weight:700}
+.card h4,.chap h4,.tl h4,.rule h4{font-weight:700;letter-spacing:-.02em}
+.hero2 h1{font-weight:800;font-size:clamp(34px,4.6vw,60px);line-height:1.24;letter-spacing:-.035em}
+.eyebrow{font:var(--label);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:#D9C3A8}
+.num,.tl .when{font:var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--wood)}
+.dark .num{color:#D9A97C}
+.bar .logo{font:700 17px/1 var(--sans);letter-spacing:-.01em}
+.stat b{font:800 clamp(44px,5.2vw,68px)/1 var(--sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums lining-nums}
+.stat b small{font-size:.38em;font-weight:700;letter-spacing:-.01em;margin-left:4px;color:inherit;opacity:.75}
+.stat>span{font-size:14px;line-height:1.55}
+.chap .k,.rule .k{font:800 38px/1 var(--sans);letter-spacing:-.03em}
+blockquote{font-weight:700;letter-spacing:-.025em}
+td.n,th{font-variant-numeric:tabular-nums}
+.chip{font-variant-numeric:tabular-nums}
